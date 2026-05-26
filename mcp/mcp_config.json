@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "forensic-sift": {
+      "command": "python3",
+      "args": ["/home/macbere/findevil/mcp/sift_server.py"],
+      "tools": ["fls","foremost","exiftool","md5sum","yara","volatility3"],
+      "evidence_path": "/home/macbere/findevil/evidence",
+      "description": "SIFT Workstation forensic tool integration"
+    }
+  },
+  "api_key": "ANTHROPIC_API_KEY_HERE",
+  "model": "claude-sonnet-4-20250514",
+  "note": "Replace ANTHROPIC_API_KEY_HERE with real key to activate live AI"
+}
