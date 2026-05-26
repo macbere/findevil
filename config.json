@@ -1,0 +1,13 @@
+{
+  "project": "FindEvil Forensic AI Agent",
+  "version": "1.0.0",
+  "author": "macbere",
+  "hackathon": "SANS Find Evil 2026",
+  "mode": "mock",
+  "api_key_placeholder": "ANTHROPIC_API_KEY_HERE",
+  "model": "claude-sonnet-4-20250514",
+  "tools": ["sleuthkit", "volatility3", "foremost", "binwalk", "exiftool", "yara"],
+  "evidence_path": "/home/macbere/findevil/evidence",
+  "logs_path": "/home/macbere/findevil/logs",
+  "reports_path": "/home/macbere/findevil/reports"
+}

@@ -1,0 +1,27 @@
+{
+  "agent": "FindEvil Mock Agent v1.0",
+  "run_time": "2026-05-26T20:15:52.084907",
+  "total_findings": 3,
+  "findings": [
+    {
+      "type": "filesystem",
+      "tool": "find",
+      "result": "/home/macbere/findevil/evidence/test_evidence.dd\n",
+      "timestamp": "2026-05-26T20:15:51.955069"
+    },
+    {
+      "type": "hash_check",
+      "tool": "md5sum",
+      "result": "d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd\n",
+      "timestamp": "2026-05-26T20:15:51.962948"
+    },
+    {
+      "type": "metadata",
+      "tool": "exiftool",
+      "result": "ExifTool Version Number         : 12.76\nFile Name                       : test_evidence.dd\nDirectory                       : /home/macbere/findevil/evidence\nFile Size                       : 0 bytes\nFile Modification Date/Time     : 2026:05:26 20:09:16+01:00\nFile Access Date/Time           : 2026:05:26 20:09:39+01:00\nFile Inode Change Date/Time     : 2026:05:26 20:09:16+01:00\nFile Permissions                : -rw-r--r--\nError                           : File is empty\n",
+      "timestamp": "2026-05-26T20:15:52.084629"
+    }
+  ],
+  "self_corrections": 0,
+  "status": "COMPLETE"
+}

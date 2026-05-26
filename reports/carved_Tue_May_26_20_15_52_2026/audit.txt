@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue May 26 20:15:52 2026
+Invocation: foremost -i /home/macbere/findevil/evidence/test_evidence.dd -o /home/macbere/findevil/reports/carved -T 
+Output directory: /home/macbere/findevil/reports/carved_Tue_May_26_20_15_52_2026
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: /home/macbere/findevil/evidence/test_evidence.dd
+Start: Tue May 26 20:15:52 2026
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Tue May 26 20:15:52 2026
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Tue May 26 20:15:52 2026

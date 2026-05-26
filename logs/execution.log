@@ -1,0 +1,108 @@
+[2026-05-26T20:04:24.694533] [INFO] === FindEvil Agent Starting ===
+[2026-05-26T20:04:24.694798] [INFO] MODE: mock (add API key to go live)
+[2026-05-26T20:04:24.694964] [INFO] PHASE 1: File system analysis
+[2026-05-26T20:04:24.695133] [INFO] TOOL_CALL: find ~/findevil/evidence -type f 2>/dev/null | head -20
+[2026-05-26T20:04:24.706574] [INFO] TOOL_RESULT: (no output)
+[2026-05-26T20:04:24.707257] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:04:24.707469] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:04:24.707712] [INFO] PHASE 2: Hash integrity check
+[2026-05-26T20:04:24.708023] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/null | head -10
+[2026-05-26T20:04:24.713819] [INFO] TOOL_RESULT: (no output)
+[2026-05-26T20:04:24.714052] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:04:24.714188] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:04:24.714413] [INFO] PHASE 3: Metadata extraction
+[2026-05-26T20:04:24.714599] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec exiftool {} \; 2>/dev/null | head -30
+[2026-05-26T20:04:24.719219] [INFO] TOOL_RESULT: (no output)
+[2026-05-26T20:04:24.719450] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:04:24.719689] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:04:24.720515] [INFO] === Analysis Complete: 3 findings saved ===
+[2026-05-26T20:04:24.720860] [INFO] Report: /home/macbere/findevil/reports/findings.json
+[2026-05-26T20:09:39.844590] [INFO] === FindEvil Agent Starting ===
+[2026-05-26T20:09:39.844833] [INFO] MODE: mock (add API key to go live)
+[2026-05-26T20:09:39.847345] [INFO] PHASE 1: File system analysis
+[2026-05-26T20:09:39.847636] [INFO] TOOL_CALL: find ~/findevil/evidence -type f 2>/dev/null | head -20
+[2026-05-26T20:09:39.853771] [INFO] TOOL_RESULT: /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:09:39.854015] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:09:39.854155] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:09:39.854335] [INFO] PHASE 2: Hash integrity check
+[2026-05-26T20:09:39.854620] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/null | head -10
+[2026-05-26T20:09:39.866700] [INFO] TOOL_RESULT: d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:09:39.866916] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:09:39.867062] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:09:39.867246] [INFO] PHASE 3: Metadata extraction
+[2026-05-26T20:09:39.867401] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec exiftool {} \; 2>/dev/null | head -30
+[2026-05-26T20:09:40.094012] [INFO] TOOL_RESULT: ExifTool Version Number         : 12.76
+File Name                       : test_evidence.dd
+Directory                       : /home/macbere/findevil/evidence
+File Size                       : 0 bytes
+F
+[2026-05-26T20:09:40.094324] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:09:40.094514] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:09:40.095083] [INFO] === Analysis Complete: 3 findings saved ===
+[2026-05-26T20:09:40.095246] [INFO] Report: /home/macbere/findevil/reports/findings.json
+[2026-05-26T20:15:51.803405] [INFO] === FindEvil Agent Starting ===
+[2026-05-26T20:15:51.803573] [INFO] MODE: mock (add API key to go live)
+[2026-05-26T20:15:51.803712] [INFO] PHASE 1: File system analysis
+[2026-05-26T20:15:51.803885] [INFO] TOOL_CALL: find ~/findevil/evidence -type f 2>/dev/null | head -20
+[2026-05-26T20:15:51.808222] [INFO] TOOL_RESULT: /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:15:51.808388] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:51.808533] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:51.808651] [INFO] PHASE 2: Hash integrity check
+[2026-05-26T20:15:51.808790] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/null | head -10
+[2026-05-26T20:15:51.816868] [INFO] TOOL_RESULT: d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:15:51.817047] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:51.817187] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:51.817318] [INFO] PHASE 3: Metadata extraction
+[2026-05-26T20:15:51.817513] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec exiftool {} \; 2>/dev/null | head -30
+[2026-05-26T20:15:51.946910] [INFO] TOOL_RESULT: ExifTool Version Number         : 12.76
+File Name                       : test_evidence.dd
+Directory                       : /home/macbere/findevil/evidence
+File Size                       : 0 bytes
+F
+[2026-05-26T20:15:51.947114] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:51.947245] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:51.947925] [INFO] === Analysis Complete: 3 findings saved ===
+[2026-05-26T20:15:51.948178] [INFO] Report: /home/macbere/findevil/reports/findings.json
+[2026-05-26T20:15:51.948340] [INFO] === FindEvil Agent Starting ===
+[2026-05-26T20:15:51.948466] [INFO] MODE: mock (add API key to go live)
+[2026-05-26T20:15:51.948730] [INFO] PHASE 1: File system analysis
+[2026-05-26T20:15:51.948917] [INFO] TOOL_CALL: find ~/findevil/evidence -type f 2>/dev/null | head -20
+[2026-05-26T20:15:51.954913] [INFO] TOOL_RESULT: /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:15:51.955078] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:51.955188] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:51.955319] [INFO] PHASE 2: Hash integrity check
+[2026-05-26T20:15:51.955501] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/null | head -10
+[2026-05-26T20:15:51.962737] [INFO] TOOL_RESULT: d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd
+
+[2026-05-26T20:15:51.962962] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:51.963109] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:51.963250] [INFO] PHASE 3: Metadata extraction
+[2026-05-26T20:15:51.963447] [INFO] TOOL_CALL: find ~/findevil/evidence -type f -exec exiftool {} \; 2>/dev/null | head -30
+[2026-05-26T20:15:52.084449] [INFO] TOOL_RESULT: ExifTool Version Number         : 12.76
+File Name                       : test_evidence.dd
+Directory                       : /home/macbere/findevil/evidence
+File Size                       : 0 bytes
+F
+[2026-05-26T20:15:52.084638] [INFO] SELF_CORRECTION attempt 1: validating finding
+[2026-05-26T20:15:52.084768] [INFO] VALIDATION: Finding confirmed traceable to artifact
+[2026-05-26T20:15:52.085276] [INFO] === Analysis Complete: 3 findings saved ===
+[2026-05-26T20:15:52.085491] [INFO] Report: /home/macbere/findevil/reports/findings.json
+[2026-05-26T20:15:52.085652] [INFO] PHASE 4: File carving with foremost
+[2026-05-26T20:15:52.086603] [INFO] TOOL_CALL: foremost -i ~/findevil/evidence/test_evidence.dd -o ~/findevil/reports/carved -T 2>&1 | tail -5
+[2026-05-26T20:15:52.111566] [INFO] TOOL_RESULT: Processing: /home/macbere/findevil/evidence/test_evidence.dd
+||
+
+[2026-05-26T20:15:52.111712] [INFO] CARVING_RESULT: Processing: /home/macbere/findevil/evidence/test_evidence.dd
+||
+
+[2026-05-26T20:15:52.112463] [INFO] PHASE 5: Sleuthkit filesystem analysis
+[2026-05-26T20:15:52.112604] [INFO] TOOL_CALL: fls ~/findevil/evidence/test_evidence.dd 2>&1 | head -20
+[2026-05-26T20:15:52.253526] [INFO] TOOL_RESULT: Sector offset supplied is larger than disk image (maximum: 0)
+
+[2026-05-26T20:15:52.253737] [INFO] FILESYSTEM_RESULT: Sector offset supplied is larger than disk image (maximum: 0)
+
