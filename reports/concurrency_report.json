@@ -1,0 +1,1001 @@
+{
+  "test": "Concurrent MCP Stress Test",
+  "timestamp": "2026-05-27T07:34:33.446995",
+  "workers": 5,
+  "total_files": 95,
+  "wall_time_sec": 0.409,
+  "sequential_sample_time_sec": 0.104,
+  "speedup_factor": 4.85,
+  "errors_detected": 0,
+  "error_details": [],
+  "race_conditions": 0,
+  "state_isolation": "PASS",
+  "verdict": "PASS",
+  "worker_results": [
+    {
+      "worker_id": 1,
+      "files_processed": 19,
+      "total_time_sec": 0.372,
+      "results": [
+        {
+          "worker_id": 1,
+          "file": "artifact_007.txt",
+          "elapsed": 0.0314,
+          "findings": [
+            "hash_ok",
+            "ioc:24",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_018.txt",
+          "elapsed": 0.018,
+          "findings": [
+            "hash_ok",
+            "ioc:20",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_011.txt",
+          "elapsed": 0.0183,
+          "findings": [
+            "hash_ok",
+            "ioc:23",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_005.txt",
+          "elapsed": 0.0145,
+          "findings": [
+            "hash_ok",
+            "ioc:17",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_000.txt",
+          "elapsed": 0.0196,
+          "findings": [
+            "hash_ok",
+            "ioc:17",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_006.txt",
+          "elapsed": 0.0187,
+          "findings": [
+            "hash_ok",
+            "ioc:18",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_009.txt",
+          "elapsed": 0.0268,
+          "findings": [
+            "hash_ok",
+            "ioc:17",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_019.txt",
+          "elapsed": 0.015,
+          "findings": [
+            "hash_ok",
+            "ioc:19",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_016.txt",
+          "elapsed": 0.017,
+          "findings": [
+            "hash_ok",
+            "ioc:20",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_002.txt",
+          "elapsed": 0.0167,
+          "findings": [
+            "hash_ok",
+            "ioc:22",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_010.txt",
+          "elapsed": 0.0178,
+          "findings": [
+            "hash_ok",
+            "ioc:21",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_008.txt",
+          "elapsed": 0.0223,
+          "findings": [
+            "hash_ok",
+            "ioc:24",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_014.txt",
+          "elapsed": 0.0206,
+          "findings": [
+            "hash_ok",
+            "ioc:22",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_003.txt",
+          "elapsed": 0.0223,
+          "findings": [
+            "hash_ok",
+            "ioc:18",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_013.txt",
+          "elapsed": 0.0174,
+          "findings": [
+            "hash_ok",
+            "ioc:18",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_001.txt",
+          "elapsed": 0.0218,
+          "findings": [
+            "hash_ok",
+            "ioc:17",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_017.txt",
+          "elapsed": 0.0176,
+          "findings": [
+            "hash_ok",
+            "ioc:19",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_012.txt",
+          "elapsed": 0.0183,
+          "findings": [
+            "hash_ok",
+            "ioc:25",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 1,
+          "file": "artifact_015.txt",
+          "elapsed": 0.0174,
+          "findings": [
+            "hash_ok",
+            "ioc:23",
+            "lines_ok"
+          ]
+        }
+      ]
+    },
+    {
+      "worker_id": 4,
+      "files_processed": 19,
+      "total_time_sec": 0.398,
+      "results": [
+        {
+          "worker_id": 4,
+          "file": "syslog_005.log",
+          "elapsed": 0.0298,
+          "findings": [
+            "hash_ok",
+            "ioc:56",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_021.log",
+          "elapsed": 0.018,
+          "findings": [
+            "hash_ok",
+            "ioc:63",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_002.log",
+          "elapsed": 0.0181,
+          "findings": [
+            "hash_ok",
+            "ioc:46",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_023.log",
+          "elapsed": 0.0164,
+          "findings": [
+            "hash_ok",
+            "ioc:57",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_012.log",
+          "elapsed": 0.0217,
+          "findings": [
+            "hash_ok",
+            "ioc:49",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_024.log",
+          "elapsed": 0.0186,
+          "findings": [
+            "hash_ok",
+            "ioc:56",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_046.log",
+          "elapsed": 0.028,
+          "findings": [
+            "hash_ok",
+            "ioc:57",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_007.log",
+          "elapsed": 0.0255,
+          "findings": [
+            "hash_ok",
+            "ioc:44",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_018.log",
+          "elapsed": 0.0179,
+          "findings": [
+            "hash_ok",
+            "ioc:54",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_009.log",
+          "elapsed": 0.0257,
+          "findings": [
+            "hash_ok",
+            "ioc:47",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_045.log",
+          "elapsed": 0.0199,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_029.log",
+          "elapsed": 0.0175,
+          "findings": [
+            "hash_ok",
+            "ioc:46",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_010.log",
+          "elapsed": 0.0225,
+          "findings": [
+            "hash_ok",
+            "ioc:56",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_049.log",
+          "elapsed": 0.0208,
+          "findings": [
+            "hash_ok",
+            "ioc:62",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_040.log",
+          "elapsed": 0.0157,
+          "findings": [
+            "hash_ok",
+            "ioc:62",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_027.log",
+          "elapsed": 0.0167,
+          "findings": [
+            "hash_ok",
+            "ioc:41",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_003.log",
+          "elapsed": 0.0245,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_001.log",
+          "elapsed": 0.0212,
+          "findings": [
+            "hash_ok",
+            "ioc:48",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 4,
+          "file": "syslog_014.log",
+          "elapsed": 0.0195,
+          "findings": [
+            "hash_ok",
+            "ioc:51",
+            "lines_ok"
+          ]
+        }
+      ]
+    },
+    {
+      "worker_id": 2,
+      "files_processed": 19,
+      "total_time_sec": 0.401,
+      "results": [
+        {
+          "worker_id": 2,
+          "file": "artifact_004.txt",
+          "elapsed": 0.0293,
+          "findings": [
+            "hash_ok",
+            "ioc:22",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_007.pcap.txt",
+          "elapsed": 0.0202,
+          "findings": [
+            "hash_ok",
+            "ioc:51",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_009.pcap.txt",
+          "elapsed": 0.0208,
+          "findings": [
+            "hash_ok",
+            "ioc:42",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_005.pcap.txt",
+          "elapsed": 0.0163,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_010.pcap.txt",
+          "elapsed": 0.0157,
+          "findings": [
+            "hash_ok",
+            "ioc:42",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_013.pcap.txt",
+          "elapsed": 0.0176,
+          "findings": [
+            "hash_ok",
+            "ioc:40",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_014.pcap.txt",
+          "elapsed": 0.0188,
+          "findings": [
+            "hash_ok",
+            "ioc:44",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_000.pcap.txt",
+          "elapsed": 0.0238,
+          "findings": [
+            "hash_ok",
+            "ioc:53",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_004.pcap.txt",
+          "elapsed": 0.0182,
+          "findings": [
+            "hash_ok",
+            "ioc:46",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_012.pcap.txt",
+          "elapsed": 0.0203,
+          "findings": [
+            "hash_ok",
+            "ioc:37",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_008.pcap.txt",
+          "elapsed": 0.0172,
+          "findings": [
+            "hash_ok",
+            "ioc:41",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_006.pcap.txt",
+          "elapsed": 0.021,
+          "findings": [
+            "hash_ok",
+            "ioc:34",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_001.pcap.txt",
+          "elapsed": 0.019,
+          "findings": [
+            "hash_ok",
+            "ioc:37",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_003.pcap.txt",
+          "elapsed": 0.0264,
+          "findings": [
+            "hash_ok",
+            "ioc:41",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_002.pcap.txt",
+          "elapsed": 0.0192,
+          "findings": [
+            "hash_ok",
+            "ioc:45",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "capture_011.pcap.txt",
+          "elapsed": 0.0208,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "memdump_002.txt",
+          "elapsed": 0.0184,
+          "findings": [
+            "hash_ok",
+            "ioc:1",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "memdump_009.txt",
+          "elapsed": 0.0256,
+          "findings": [
+            "hash_ok",
+            "ioc:1",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 2,
+          "file": "memdump_000.txt",
+          "elapsed": 0.0319,
+          "findings": [
+            "hash_ok",
+            "ioc:2",
+            "lines_ok"
+          ]
+        }
+      ]
+    },
+    {
+      "worker_id": 5,
+      "files_processed": 19,
+      "total_time_sec": 0.403,
+      "results": [
+        {
+          "worker_id": 5,
+          "file": "syslog_028.log",
+          "elapsed": 0.0284,
+          "findings": [
+            "hash_ok",
+            "ioc:43",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_026.log",
+          "elapsed": 0.0175,
+          "findings": [
+            "hash_ok",
+            "ioc:45",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_044.log",
+          "elapsed": 0.0245,
+          "findings": [
+            "hash_ok",
+            "ioc:57",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_032.log",
+          "elapsed": 0.0322,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_016.log",
+          "elapsed": 0.0227,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_008.log",
+          "elapsed": 0.0216,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_036.log",
+          "elapsed": 0.0206,
+          "findings": [
+            "hash_ok",
+            "ioc:55",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_042.log",
+          "elapsed": 0.0241,
+          "findings": [
+            "hash_ok",
+            "ioc:56",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_019.log",
+          "elapsed": 0.027,
+          "findings": [
+            "hash_ok",
+            "ioc:48",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_035.log",
+          "elapsed": 0.0231,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_039.log",
+          "elapsed": 0.0177,
+          "findings": [
+            "hash_ok",
+            "ioc:61",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_037.log",
+          "elapsed": 0.0166,
+          "findings": [
+            "hash_ok",
+            "ioc:55",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_047.log",
+          "elapsed": 0.019,
+          "findings": [
+            "hash_ok",
+            "ioc:47",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_022.log",
+          "elapsed": 0.0142,
+          "findings": [
+            "hash_ok",
+            "ioc:52",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_025.log",
+          "elapsed": 0.0217,
+          "findings": [
+            "hash_ok",
+            "ioc:53",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_004.log",
+          "elapsed": 0.0194,
+          "findings": [
+            "hash_ok",
+            "ioc:50",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_000.log",
+          "elapsed": 0.0214,
+          "findings": [
+            "hash_ok",
+            "ioc:43",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_038.log",
+          "elapsed": 0.0173,
+          "findings": [
+            "hash_ok",
+            "ioc:51",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 5,
+          "file": "syslog_015.log",
+          "elapsed": 0.0133,
+          "findings": [
+            "hash_ok",
+            "ioc:55",
+            "lines_ok"
+          ]
+        }
+      ]
+    },
+    {
+      "worker_id": 3,
+      "files_processed": 19,
+      "total_time_sec": 0.408,
+      "results": [
+        {
+          "worker_id": 3,
+          "file": "memdump_005.txt",
+          "elapsed": 0.0317,
+          "findings": [
+            "hash_ok",
+            "ioc:3",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_007.txt",
+          "elapsed": 0.0241,
+          "findings": [
+            "hash_ok",
+            "ioc:3",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_004.txt",
+          "elapsed": 0.0184,
+          "findings": [
+            "hash_ok",
+            "ioc:2",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_006.txt",
+          "elapsed": 0.0201,
+          "findings": [
+            "hash_ok",
+            "ioc:2",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_003.txt",
+          "elapsed": 0.0216,
+          "findings": [
+            "hash_ok",
+            "ioc:3",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_008.txt",
+          "elapsed": 0.0272,
+          "findings": [
+            "hash_ok",
+            "ioc:2",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "memdump_001.txt",
+          "elapsed": 0.024,
+          "findings": [
+            "hash_ok",
+            "ioc:1",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_006.log",
+          "elapsed": 0.0225,
+          "findings": [
+            "hash_ok",
+            "ioc:48",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_041.log",
+          "elapsed": 0.0168,
+          "findings": [
+            "hash_ok",
+            "ioc:46",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_043.log",
+          "elapsed": 0.0142,
+          "findings": [
+            "hash_ok",
+            "ioc:41",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_031.log",
+          "elapsed": 0.0203,
+          "findings": [
+            "hash_ok",
+            "ioc:53",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_020.log",
+          "elapsed": 0.0216,
+          "findings": [
+            "hash_ok",
+            "ioc:49",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_011.log",
+          "elapsed": 0.0232,
+          "findings": [
+            "hash_ok",
+            "ioc:47",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_013.log",
+          "elapsed": 0.0207,
+          "findings": [
+            "hash_ok",
+            "ioc:48",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_030.log",
+          "elapsed": 0.0201,
+          "findings": [
+            "hash_ok",
+            "ioc:52",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_017.log",
+          "elapsed": 0.0212,
+          "findings": [
+            "hash_ok",
+            "ioc:55",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_048.log",
+          "elapsed": 0.0194,
+          "findings": [
+            "hash_ok",
+            "ioc:54",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_034.log",
+          "elapsed": 0.0269,
+          "findings": [
+            "hash_ok",
+            "ioc:54",
+            "lines_ok"
+          ]
+        },
+        {
+          "worker_id": 3,
+          "file": "syslog_033.log",
+          "elapsed": 0.0136,
+          "findings": [
+            "hash_ok",
+            "ioc:49",
+            "lines_ok"
+          ]
+        }
+      ]
+    }
+  ]
+}

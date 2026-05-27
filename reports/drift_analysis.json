@@ -1,0 +1,17 @@
+{
+  "test": "Burst Load & Self-Correction Resilience",
+  "timestamp": "2026-05-27T07:39:16.814404",
+  "total_runs": 30,
+  "no_cooldown_runs": 30,
+  "cooldown_runs": 5,
+  "first_10_avg_sec": 0.033,
+  "last_10_avg_sec": 0.0307,
+  "drift_percent": -6.68,
+  "memory_start_kb": 11904,
+  "memory_end_kb": 12032,
+  "memory_growth_kb": 128,
+  "total_corrections": 0,
+  "total_hallucinations_caught": 0,
+  "stability_verdict": "STABLE",
+  "memory_verdict": "OK"
+}

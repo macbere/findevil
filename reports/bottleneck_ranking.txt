@@ -1,0 +1,10 @@
+BOTTLENECK RANKING (slowest to fastest)
+========================================
+#1 Phase2_Hashing: 0.3101s
+#2 Phase4_Metadata: 0.1571s
+#3 Phase1_FileSystem: 0.0074s
+#4 Phase3_IOC_Search: 0.0069s
+#5 Phase5_Reporting: 0.0029s
+
+PRIMARY BOTTLENECK: Phase2_Hashing
+FASTEST PHASE: Phase5_Reporting

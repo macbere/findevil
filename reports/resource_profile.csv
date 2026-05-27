@@ -1,0 +1,6 @@
+phase,elapsed_sec,cpu_busy_pct,ram_used_mb,ram_used_pct,disk_used,process_mem_kb,output
+Phase1_FileSystem,0.0074,0.23,353,9.4,3.8G,12160,95
+Phase2_Hashing,0.3101,0.23,363,9.6,3.8G,12160,95
+Phase3_IOC_Search,0.0069,0.23,363,9.6,3.8G,12160,3641
+Phase4_Metadata,0.1571,0.23,359,9.5,3.8G,12160,100 /tmp/stress_evidence/logs/syslog_015.log
+Phase5_Reporting,0.0029,0.23,360,9.5,3.8G,12160,3
