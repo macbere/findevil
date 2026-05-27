@@ -1,0 +1,26 @@
+[2026-05-27T21:02:11.077134] [INFO] [ACCURACY_GUARD] ==================================================
+[2026-05-27T21:02:11.077654] [INFO] [ACCURACY_GUARD] ACCURACY_GUARD: Full report validation starting
+[2026-05-27T21:02:11.077795] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: 192.168.1.100:4444 reverse shell via nc
+[2026-05-27T21:02:11.077946] [INFO] [ACCURACY_GUARD] CLASSIFICATION: CONFIRMED — ['confirmed_ips:192.168.1.100', 'confirmed_ports:4444', 'confirmed_tools:nc']
+[2026-05-27T21:02:11.078093] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: suspicious process running
+[2026-05-27T21:02:11.078210] [WARN] [ACCURACY_GUARD] CLASSIFICATION: POTENTIAL_HALLUCINATION — zero ground truth matches!
+[2026-05-27T21:02:11.078311] [WARN] [ACCURACY_GUARD] HALLUCINATION_GUARD: Flagging for human review
+[2026-05-27T21:02:11.078441] [WARN] [ACCURACY_GUARD] HALLUCINATION_ACTION: Finding will NOT appear in confirmed report
+[2026-05-27T21:02:11.078545] [WARN] [ACCURACY_GUARD] HALLUCINATION_CAUGHT: suspicious process running
+[2026-05-27T21:02:11.078662] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: 10.0.0.5 SSH brute force at 03:14
+[2026-05-27T21:02:11.078826] [INFO] [ACCURACY_GUARD] CLASSIFICATION: CONFIRMED — ['confirmed_ips:10.0.0.5', 'confirmed_times:03:14']
+[2026-05-27T21:02:11.078963] [INFO] [ACCURACY_GUARD] ACCURACY_SUMMARY: 2 confirmed, 0 inferred, 1 hallucinations caught
+[2026-05-27T21:02:11.079073] [INFO] [ACCURACY_GUARD] ==================================================
+[2026-05-27T21:04:47.747526] [INFO] [ACCURACY_GUARD] ==================================================
+[2026-05-27T21:04:47.747692] [INFO] [ACCURACY_GUARD] ACCURACY_GUARD: Full report validation starting
+[2026-05-27T21:04:47.747793] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: 192.168.1.100:4444 reverse shell via nc
+[2026-05-27T21:04:47.747904] [INFO] [ACCURACY_GUARD] CLASSIFICATION: CONFIRMED — ['confirmed_ips:192.168.1.100', 'confirmed_ports:4444', 'confirmed_tools:nc']
+[2026-05-27T21:04:47.748018] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: suspicious process running
+[2026-05-27T21:04:47.748127] [WARN] [ACCURACY_GUARD] CLASSIFICATION: POTENTIAL_HALLUCINATION — zero ground truth matches!
+[2026-05-27T21:04:47.748273] [WARN] [ACCURACY_GUARD] HALLUCINATION_GUARD: Flagging for human review
+[2026-05-27T21:04:47.748379] [WARN] [ACCURACY_GUARD] HALLUCINATION_ACTION: Finding will NOT appear in confirmed report
+[2026-05-27T21:04:47.748482] [WARN] [ACCURACY_GUARD] HALLUCINATION_CAUGHT: suspicious process running
+[2026-05-27T21:04:47.748574] [INFO] [ACCURACY_GUARD] ACCURACY_CHECK: Classifying finding: 10.0.0.5 SSH brute force at 03:14
+[2026-05-27T21:04:47.748652] [INFO] [ACCURACY_GUARD] CLASSIFICATION: CONFIRMED — ['confirmed_ips:10.0.0.5', 'confirmed_times:03:14']
+[2026-05-27T21:04:47.748763] [INFO] [ACCURACY_GUARD] ACCURACY_SUMMARY: 2 confirmed, 0 inferred, 1 hallucinations caught
+[2026-05-27T21:04:47.748867] [INFO] [ACCURACY_GUARD] ==================================================

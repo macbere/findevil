@@ -1,0 +1,62 @@
+[2026-05-27T21:03:02.851426] [INFO] [DEEP_ANALYSIS] NEXUS-IR Deep Analysis Module Starting
+[2026-05-27T21:03:02.851855] [INFO] [DEEP_ANALYSIS] DEEP_FS: Starting multi-layer filesystem analysis
+[2026-05-27T21:03:02.851998] [INFO] [DEEP_ANALYSIS] TOOL: find_detailed -> find ~/findevil/evidence -type f -exec ls -la {} \; 2>/dev/n
+[2026-05-27T21:03:02.878064] [INFO] [DEEP_ANALYSIS] RESULT: -rw-r--r-- 1 macbere macbere 0 May 26 21:02 /home/macbere/findevil/evidence/terry.dd.bz2
+-rw-r--r-- 1 macbere macbere 0 May 26 20:09 /home/macbere/fin
+[2026-05-27T21:03:02.878597] [INFO] [DEEP_ANALYSIS] TOOL: file_signatures -> find ~/findevil/evidence -type f | while read f; do echo "==
+[2026-05-27T21:03:02.900486] [INFO] [DEEP_ANALYSIS] RESULT: === /home/macbere/findevil/evidence/terry.dd.bz2 ===
+=== /home/macbere/findevil/evidence/test_evidence.dd ===
+=== /home/macbere/findevil/evidence/samp
+[2026-05-27T21:03:02.900629] [INFO] [DEEP_ANALYSIS] TOOL: md5_all -> find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/n
+[2026-05-27T21:03:02.924507] [INFO] [DEEP_ANALYSIS] RESULT: d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/terry.dd.bz2
+d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_
+[2026-05-27T21:03:02.924721] [INFO] [DEEP_ANALYSIS] TOOL: strings_extract -> strings ~/findevil/evidence/test_evidence.dd 2>/dev/null | g
+[2026-05-27T21:03:02.945115] [INFO] [DEEP_ANALYSIS] RESULT: (no output)
+[2026-05-27T21:03:02.945254] [INFO] [DEEP_ANALYSIS] DEEP_FS: Completed 4 analysis layers
+[2026-05-27T21:03:02.945367] [INFO] [DEEP_ANALYSIS] TIMELINE: Building chronological attack timeline
+[2026-05-27T21:03:02.945526] [INFO] [DEEP_ANALYSIS] TOOL: timeline_extract -> grep -h '03:1[0-9]\|03:2[0-9]' ~/findevil/evidence/sample/*.
+[2026-05-27T21:03:02.952397] [INFO] [DEEP_ANALYSIS] RESULT: May 26 03:14 sshd: Failed password for root from 10.0.0.5
+May 26 03:15 sshd: Accepted password for root from 10.0.0.5
+[2026-05-27T21:03:02.952553] [INFO] [DEEP_ANALYSIS] TIMELINE: Built 6 chronological events
+[2026-05-27T21:03:02.952657] [INFO] [DEEP_ANALYSIS] DEEP_NET: Multi-layer network IOC analysis
+[2026-05-27T21:03:02.952776] [INFO] [DEEP_ANALYSIS] TOOL: ip_extract -> grep -ohE '([0-9]{1,3}\.){3}[0-9]{1,3}' ~/findevil/evidence/
+[2026-05-27T21:03:02.961522] [INFO] [DEEP_ANALYSIS] RESULT: 2 10.0.0.5
+      1 192.168.1.100
+[2026-05-27T21:03:02.961667] [INFO] [DEEP_ANALYSIS] TOOL: port_extract -> grep -ohE ':[0-9]{2,5}' ~/findevil/evidence/sample/*.txt 2>/
+[2026-05-27T21:03:02.969379] [INFO] [DEEP_ANALYSIS] RESULT: 1 :15
+      1 :14
+[2026-05-27T21:03:02.969692] [INFO] [DEEP_ANALYSIS] TOOL: c2_detect -> grep -h 'beacon\|gate.php\|POST.*upload\|reverse shell\|nc -
+[2026-05-27T21:03:02.977265] [INFO] [DEEP_ANALYSIS] RESULT: (no output)
+[2026-05-27T21:03:02.977399] [INFO] [DEEP_ANALYSIS] DEEP_NET: Completed 3 network analysis layers
+[2026-05-27T21:03:02.977920] [INFO] [DEEP_ANALYSIS] DEEP_ANALYSIS COMPLETE: 6 timeline events, report saved to /home/macbere/findevil/reports/deep_analysis.json
+[2026-05-27T21:04:47.802637] [INFO] [DEEP_ANALYSIS] NEXUS-IR Deep Analysis Module Starting
+[2026-05-27T21:04:47.802783] [INFO] [DEEP_ANALYSIS] DEEP_FS: Starting multi-layer filesystem analysis
+[2026-05-27T21:04:47.802982] [INFO] [DEEP_ANALYSIS] TOOL: find_detailed -> find ~/findevil/evidence -type f -exec ls -la {} \; 2>/dev/n
+[2026-05-27T21:04:47.822326] [INFO] [DEEP_ANALYSIS] RESULT: -rw-r--r-- 1 macbere macbere 0 May 26 21:02 /home/macbere/findevil/evidence/terry.dd.bz2
+-rw-r--r-- 1 macbere macbere 0 May 26 20:09 /home/macbere/fin
+[2026-05-27T21:04:47.822477] [INFO] [DEEP_ANALYSIS] TOOL: file_signatures -> find ~/findevil/evidence -type f | while read f; do echo "==
+[2026-05-27T21:04:47.839163] [INFO] [DEEP_ANALYSIS] RESULT: === /home/macbere/findevil/evidence/terry.dd.bz2 ===
+=== /home/macbere/findevil/evidence/test_evidence.dd ===
+=== /home/macbere/findevil/evidence/samp
+[2026-05-27T21:04:47.839362] [INFO] [DEEP_ANALYSIS] TOOL: md5_all -> find ~/findevil/evidence -type f -exec md5sum {} \; 2>/dev/n
+[2026-05-27T21:04:47.858001] [INFO] [DEEP_ANALYSIS] RESULT: d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/terry.dd.bz2
+d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_
+[2026-05-27T21:04:47.858149] [INFO] [DEEP_ANALYSIS] TOOL: strings_extract -> strings ~/findevil/evidence/test_evidence.dd 2>/dev/null | g
+[2026-05-27T21:04:47.864268] [INFO] [DEEP_ANALYSIS] RESULT: (no output)
+[2026-05-27T21:04:47.864424] [INFO] [DEEP_ANALYSIS] DEEP_FS: Completed 4 analysis layers
+[2026-05-27T21:04:47.864544] [INFO] [DEEP_ANALYSIS] TIMELINE: Building chronological attack timeline
+[2026-05-27T21:04:47.864664] [INFO] [DEEP_ANALYSIS] TOOL: timeline_extract -> grep -h '03:1[0-9]\|03:2[0-9]' ~/findevil/evidence/sample/*.
+[2026-05-27T21:04:47.870908] [INFO] [DEEP_ANALYSIS] RESULT: May 26 03:14 sshd: Failed password for root from 10.0.0.5
+May 26 03:15 sshd: Accepted password for root from 10.0.0.5
+[2026-05-27T21:04:47.871093] [INFO] [DEEP_ANALYSIS] TIMELINE: Built 6 chronological events
+[2026-05-27T21:04:47.871264] [INFO] [DEEP_ANALYSIS] DEEP_NET: Multi-layer network IOC analysis
+[2026-05-27T21:04:47.871414] [INFO] [DEEP_ANALYSIS] TOOL: ip_extract -> grep -ohE '([0-9]{1,3}\.){3}[0-9]{1,3}' ~/findevil/evidence/
+[2026-05-27T21:04:47.878719] [INFO] [DEEP_ANALYSIS] RESULT: 2 10.0.0.5
+      1 192.168.1.100
+[2026-05-27T21:04:47.878884] [INFO] [DEEP_ANALYSIS] TOOL: port_extract -> grep -ohE ':[0-9]{2,5}' ~/findevil/evidence/sample/*.txt 2>/
+[2026-05-27T21:04:47.885932] [INFO] [DEEP_ANALYSIS] RESULT: 1 :15
+      1 :14
+[2026-05-27T21:04:47.886072] [INFO] [DEEP_ANALYSIS] TOOL: c2_detect -> grep -h 'beacon\|gate.php\|POST.*upload\|reverse shell\|nc -
+[2026-05-27T21:04:47.890396] [INFO] [DEEP_ANALYSIS] RESULT: (no output)
+[2026-05-27T21:04:47.890531] [INFO] [DEEP_ANALYSIS] DEEP_NET: Completed 3 network analysis layers
+[2026-05-27T21:04:47.891100] [INFO] [DEEP_ANALYSIS] DEEP_ANALYSIS COMPLETE: 6 timeline events, report saved to /home/macbere/findevil/reports/deep_analysis.json

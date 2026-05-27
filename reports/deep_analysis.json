@@ -1,0 +1,54 @@
+{
+  "module": "NEXUS-IR Deep Analysis",
+  "timestamp": "2026-05-27T21:04:47.890674",
+  "filesystem_layers": 4,
+  "network_layers": 3,
+  "timeline_events": 6,
+  "attack_timeline": [
+    {
+      "timestamp": "2026-05-26T03:14:00",
+      "event": "SSH brute force begins from 10.0.0.5",
+      "source": "cleared_logs.txt",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2026-05-26T03:15:00",
+      "event": "SSH login SUCCESS as root from 10.0.0.5",
+      "source": "cleared_logs.txt",
+      "severity": "CRITICAL"
+    },
+    {
+      "timestamp": "2026-05-26T03:16:00",
+      "event": "Backdoor /tmp/.hidden_backdoor planted",
+      "source": "ioc_list.txt",
+      "severity": "CRITICAL"
+    },
+    {
+      "timestamp": "2026-05-26T03:17:00",
+      "event": "Reverse shell activated to 192.168.1.100:4444",
+      "source": "suspicious.sh",
+      "severity": "CRITICAL"
+    },
+    {
+      "timestamp": "May 26 03:14 sshd: F",
+      "event": "May 26 03:14 sshd: Failed password for root from 10.0.0.5",
+      "source": "auth_log"
+    },
+    {
+      "timestamp": "May 26 03:15 sshd: A",
+      "event": "May 26 03:15 sshd: Accepted password for root from 10.0.0.5",
+      "source": "auth_log"
+    }
+  ],
+  "filesystem_analysis": {
+    "enumeration": "-rw-r--r-- 1 macbere macbere 0 May 26 21:02 /home/macbere/findevil/evidence/terry.dd.bz2\n-rw-r--r-- 1 macbere macbere 0 May 26 20:09 /home/macbere/findevil/evidence/test_evidence.dd\n-rw-r--r-- 1 macbere macbere 81 May 26 21:02 /home/macbere/findevil/evidence/sample/suspicious.sh\n-rw-r--r-- 1 macbere macbere 118 May 26 21:02 /home/macbere/findevil/evidence/sample/cleared_logs.txt\n-rw-r--r-- 1 macbere macbere 85 May 26 21:02 /home/macbere/findevil/evidence/sample/ioc_list.txt",
+    "signatures": "=== /home/macbere/findevil/evidence/terry.dd.bz2 ===\n=== /home/macbere/findevil/evidence/test_evidence.dd ===\n=== /home/macbere/findevil/evidence/sample/suspicious.sh ===\n00000000: 2321 2f62                                #!/b\n=== /home/macbere/findevil/evidence/sample/cleared_logs.txt ===\n00000000: 4d61 7920                                May \n=== /home/macbere/findevil/evidence/sample/ioc_list.txt ===\n00000000: 4950 3a20                                IP:",
+    "hashes": "d41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/terry.dd.bz2\nd41d8cd98f00b204e9800998ecf8427e  /home/macbere/findevil/evidence/test_evidence.dd\nf23cfb8ffcb723567dd04222d2bf57f3  /home/macbere/findevil/evidence/sample/suspicious.sh\n80abc456135561ae9336dfb7c96a529b  /home/macbere/findevil/evidence/sample/cleared_logs.txt\nc9c095da8b5e9478221a9f7dfeb18e48  /home/macbere/findevil/evidence/sample/ioc_list.txt",
+    "strings": "(no output)"
+  },
+  "network_analysis": {
+    "ips": "2 10.0.0.5\n      1 192.168.1.100",
+    "ports": "1 :15\n      1 :14",
+    "c2_patterns": "(no output)"
+  }
+}

@@ -2,7 +2,7 @@
 """
 FindEvil Forensic Agent — Protocol SIFT Integration
 Mock Mode: runs without API key
-Real Mode: set ANTHROPIC_API_KEY environment variable
+Real Mode: set ANTHROPIC_API_KEY_PLACEHOLDER environment variable
 """
 import os, json, datetime, subprocess, sys
 
@@ -11,7 +11,7 @@ CASE_DIR = os.path.expanduser(f"~/cases/{CASE}")
 LOG_FILE = f"{CASE_DIR}/exports/execution.log"
 REPORT_FILE = f"{CASE_DIR}/reports/findings.json"
 EVIDENCE_DIR = os.path.expanduser("~/findevil/evidence")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", None)
+API_KEY = os.environ.get("ANTHROPIC_API_KEY_PLACEHOLDER", None)
 MODE = "LIVE" if API_KEY else "MOCK"
 
 os.makedirs(f"{CASE_DIR}/exports", exist_ok=True)
@@ -76,7 +76,7 @@ def analyze_case():
 
     if MODE == "MOCK":
         log("API_STATUS: No API key found — running in MOCK mode")
-        log("API_STATUS: To go live: export ANTHROPIC_API_KEY=your_key_here")
+        log("API_STATUS: To go live: export ANTHROPIC_API_KEY_PLACEHOLDER=your_key_here")
 
     findings = []
     corrections_made = 0

